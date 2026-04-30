@@ -79,19 +79,27 @@ public class Main {
     }
 
     static void beliProduk() {
-        input.nextLine();
-        System.out.print("Masukkan No Seri: ");
-        String cari = input.nextLine();
+    System.out.print("Masukkan No Seri: ");
+    input.nextLine(); // bersihkan buffer
+    String cari = input.nextLine();
 
-        for (Produk p : stok) {
-            if (p.nomorSeri.equals(cari)) {
-                System.out.println("Produk ditemukan:");
-                p.tampilkan();
-                System.out.println("Pembelian berhasil!");
-                return;
-            }
+    boolean ditemukan = false;
+
+    for (int i = 0; i < stok.size(); i++) {
+        if (stok.get(i).nomorSeri.equalsIgnoreCase(cari)) {
+            System.out.println("Produk ditemukan:");
+            stok.get(i).tampilkan();
+
+            stok.remove(i); // hapus dari list
+            System.out.println("Pembelian berhasil!");
+
+            ditemukan = true;
+            break; // keluar loop setelah hapus
         }
+    }
 
+    if (!ditemukan) {
         System.out.println("Produk tidak ditemukan!");
     }
+}
 }
