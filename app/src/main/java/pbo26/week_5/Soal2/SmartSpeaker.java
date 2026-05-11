@@ -1,5 +1,3 @@
-package Soal2;
-
 class SmartSpeaker extends PerangkatElektronik implements InteraksiInternet, KontrolSuara {
 
     public SmartSpeaker(String merk, int daya) {
@@ -8,7 +6,7 @@ class SmartSpeaker extends PerangkatElektronik implements InteraksiInternet, Kon
 
     @Override
     public void cekFungsi() {
-        System.out.println("\nSpeaker siap digunakan");
+        System.out.println("Speaker pintar aktif");
     }
 
     @Override
@@ -19,6 +17,5 @@ class SmartSpeaker extends PerangkatElektronik implements InteraksiInternet, Kon
     @Override
     public void prosesPerintah(String perintah) {
         System.out.println("Menjalankan perintah: " + perintah);
-        infoPower();
     }
 }

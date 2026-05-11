@@ -1,11 +1,9 @@
-package Soal1;
-
 class KaryawanKontrak extends Karyawan {
-    double upahPerHari;
+    private double upahPerHari;
 
-    public KaryawanKontrak(String nama, String idKaryawan, double gajiPerHari) {
-        super(nama, idKaryawan);
-        this.upahPerHari = gajiPerHari;
+    public KaryawanKontrak(String nama, String id, double upahPerHari) {
+        super(nama, id);
+        this.upahPerHari = upahPerHari;
     }
 
     @Override
@@ -15,6 +13,7 @@ class KaryawanKontrak extends Karyawan {
         if (getJumlahKehadiran() > 20) {
             total += 500000;
         }
+
         return total;
     }
 }

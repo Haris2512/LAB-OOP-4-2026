@@ -1,12 +1,9 @@
-package Soal1;
-
-
 class KaryawanTetap extends Karyawan {
-    double gajiPokok;
-    double tunjanganMakan;
+    private double gajiPokok;
+    private double tunjanganMakan;
 
-    public KaryawanTetap(String nama, String idKaryawan, double gajiPokok, double tunjanganMakan) {
-        super(nama, idKaryawan);
+    public KaryawanTetap(String nama, String id, double gajiPokok, double tunjanganMakan) {
+        super(nama, id);
         this.gajiPokok = gajiPokok;
         this.tunjanganMakan = tunjanganMakan;
     }
@@ -16,9 +13,7 @@ class KaryawanTetap extends Karyawan {
         return gajiPokok + (tunjanganMakan * getJumlahKehadiran());
     }
 
-    // ini itu overload, karena parameternya beda sama method hitungGaji yg di atas
     public double hitungGaji(double bonusKinerja) {
         return hitungGaji() + bonusKinerja;
     }
 }
-

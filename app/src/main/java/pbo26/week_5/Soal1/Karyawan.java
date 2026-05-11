@@ -1,6 +1,3 @@
-package Soal1;
-
-
 abstract class Karyawan {
     private String nama;
     private String idKaryawan;
@@ -15,18 +12,10 @@ abstract class Karyawan {
         jumlahKehadiran++;
     }
 
-    abstract double hitungGaji();
-
+    // GETTER
     public int getJumlahKehadiran() {
         return jumlahKehadiran;
     }
 
-    public String getNama() {
-        return nama;
-    }
-
-    public String getIdKaryawan() {
-        return idKaryawan;
-    }
-
+    public abstract double hitungGaji();
 }

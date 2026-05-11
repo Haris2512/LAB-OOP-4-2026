@@ -1,20 +1,24 @@
-package Soal2;
-
 public class Main2 {
     public static void main(String[] args) {
 
         SmartLamp lamp = new SmartLamp("Philips", 10);
         lamp.cekFungsi();
-        lamp.prosesPerintah("nyalant");
+        lamp.infoPower();
+        lamp.prosesPerintah("NYALA");
 
+        System.out.println();
 
-        SmartCCTV cctv = new SmartCCTV("Xiaomi", 15);
+        SmartCCTV cctv = new SmartCCTV("Xiaomi", 20);
         cctv.cekFungsi();
+        cctv.infoPower();
         cctv.hubungkanWiFi();
 
-        SmartSpeaker speaker = new SmartSpeaker("Google", 20);
+        System.out.println();
+
+        SmartSpeaker speaker = new SmartSpeaker("Google", 15);
         speaker.cekFungsi();
+        speaker.infoPower();
         speaker.hubungkanWiFi();
-        speaker.prosesPerintah("PLAY MUSIC");
+        speaker.prosesPerintah("Play Music");
     }
 }

@@ -1,5 +1,3 @@
-package Soal2;
-
 class SmartCCTV extends PerangkatElektronik implements InteraksiInternet {
 
     public SmartCCTV(String merk, int daya) {
@@ -8,12 +6,11 @@ class SmartCCTV extends PerangkatElektronik implements InteraksiInternet {
 
     @Override
     public void cekFungsi() {
-        System.out.println("\nCCTV aktif");
+        System.out.println("CCTV aktif");
     }
 
     @Override
     public void hubungkanWiFi() {
         System.out.println("Mengirim data ke server...");
-        infoPower();
     }
 }
